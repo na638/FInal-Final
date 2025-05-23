@@ -45,6 +45,7 @@ Tech Stack
 - Express.js
 - MySQL
 - PHP
+
 Task Assignment
 - Janea: Frontend & Backend
 - Legaspi: Frontend & Backend
