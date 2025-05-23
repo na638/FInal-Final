@@ -36,3 +36,16 @@ Add Journal Page
 
 Dashboard Page
 ![Opera Snapshot_2025-05-23_160454_dashboard html](https://github.com/user-attachments/assets/3ef0dd78-f146-4297-8edb-ba05f174e9bc)
+
+Tech Stack
+- HTML
+- CSS
+- Javascript
+- Node.js
+- Express.js
+- MySQL
+- PHP
+Task Assignment
+- Janea: Frontend & Backend
+- Legaspi: Frontend & Backend
+- Lobitaña: Fronted & Backend
