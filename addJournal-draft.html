@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoodTrack </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Castoro:ital@0;1&family=DM+Serif+Display:ital@0;1&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="final-logo.png">
+  <link rel="stylesheet" href="final-styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+  <h1>MoodTrack</h1>
+  <div style="display: flex; gap: 15px; margin-left: auto;">
+    <button id="theme-toggle" class="toggle-btn" onclick="toggleDarkMode()" title="Toggle Theme">🌙</button>
+    <button type="button" id="logout-btn" class="btn green" onclick="signout()">Sign Out</button>
+  </div>
+</nav>
+
+<main class="container">
+  <form id="moodForm" method="POST" action="/submit">
+    <section class="card">
+      <h2>Today's Mood</h2>
+      <div class="emoji-row">
+        <button type="button" onclick="setmood(this, 'happy')">😄</button>
+        <button type="button" onclick="setmood(this, 'content')">🙂</button>
+        <button type="button" onclick="setmood(this, 'neutral')">😐</button>
+        <button type="button" onclick="setmood(this, 'sad')">😔</button>
+        <button type="button" onclick="setmood(this, 'depressed')">😢</button>
+      </div>
+      <!-- mood note input created dynamically -->
+    </section>
+
+    <section class="card">
+      <h2>Journal Entry</h2>
+      <textarea id="JournalEntry" name="journal_entry" rows="5" placeholder="Would you like to share what’s been going on today?"></textarea>
+    </section>
+
+    <section class="card">
+      <h2>Music For Your Mood</h2>
+      <div class="btn-row">
+        <button type="button" class="btn blue" onclick="recommendMusic('match')">Match Mood</button>
+        <button type="button" class="btn green" onclick="recommendMusic('cheer')">Cheer Me Up</button>
+
+      </div>
+      <p id="suggestedText">Suggested Playlist: <em>None yet</em></p>
+      <input type="hidden" id="playlist_url" name="playlist_url" />
+      <input type="hidden" id="playlist_name" name="playlist_name" />
+
+    </section>
+      <div style="display: flex; justify-content: end; gap: 15px;">
+    <button type="submit" class="btn green">Post</button>
+    <button type="button" class="btn green" onclick="backToDashboard()" style="background-color: #e1dbdb; color: black;">Cancel</button>
+  </div>
+  </form>
+
+  <!-- <div style="display: flex; justify-content: end; gap: 15px;">
+    <button type="submit" class="btn green">Post</button>
+    <button type="button" class="btn green" onclick="backToDashboard()" style="background-color: #e1dbdb; color: black;">Cancel</button>
+  </div> -->
+  
+
+</main>
+
+<script src="addJournal.js"></script>
+
+    </body>
+</html>
